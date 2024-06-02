@@ -1,0 +1,30 @@
+title:        agjjQuery
+name:         agjjQuery
+description:  agjjQuery is a collection of plugins started by Andrew G. Johnson for Javascript’s jQuery library
+author:       Andrew G. Johnson
+author_email: andrew@andrewgjohnson.com
+email:        agjjQuery.org@gmail.com
+url:          "https://agjjQuery.org"
+includes_dir: .
+layouts_dir:  documentation/agjjQuery.org/layouts
+exclude:      [
+               .github,
+               .github/*.md,
+               .github/*.yml,
+               .github/CODEOWNERS,
+               bower.json,
+               bower_components,
+               bower_components/*.md,
+               CHANGELOG.md,
+               CNAME,
+               documentation/agjjQuery.org/layouts/*.html,
+               documentation/README.md,
+               LICENSE,
+               node_modules,
+               node_modules/*.md,
+               package-lock.json,
+               package.json,
+               README.md,
+               yarn-error.log,
+               yarn.lock
+              ]
