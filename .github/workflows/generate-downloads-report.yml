@@ -19,10 +19,10 @@ jobs:
       - name: Fetch downloads total
         run: |
           REPOS=(
-            #"agjjquery"
+            "agjjquery"
             "agjcalendar"
           )
-          REPORT="project|downloads\n-------|----------\n"
+          REPORT="plugin|downloads\n------|----------\n"
           TOTAL_DOWNLOADS=0
           END_DATE=$(date +"%Y-%m-%d")
 
@@ -38,7 +38,7 @@ jobs:
             REPORT+="[**$REPO**](https://www.npmjs.com/package/$REPO)|[$FORMATTED_DOWNLOADS](https://www.npmjs.com/package/$REPO)\n"
           done
           FORMATTED_TOTAL_DOWNLOADS=$(format_number $TOTAL_DOWNLOADS)
-          REPORT+="**Total downloads across all projects**|**$FORMATTED_TOTAL_DOWNLOADS**"
+          REPORT+="**Total downloads across all plugins**|**$FORMATTED_TOTAL_DOWNLOADS**"
           echo -e "$REPORT" > DOWNLOADS.md
 
       - name: Commit and push changes

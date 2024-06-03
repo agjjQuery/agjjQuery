@@ -22,7 +22,7 @@ jobs:
             "agjjQuery/agjjQuery"
             "andrewgjohnson/agjCalendar"
           )
-          REPORT="project|issues\n-------|----------\n"
+          REPORT="plugin|issues\n------|----------\n"
           TOTAL_ISSUES=0
 
           for REPO in "${REPOS[@]}"; do
@@ -33,7 +33,7 @@ jobs:
             REPO_NAME=$(echo $REPO | cut -d'/' -f2)
             REPORT+="[$USERNAME/**$REPO_NAME**](https://github.com/$REPO)|[$OPEN_ISSUES](https://github.com/$REPO/issues)\n"
           done
-          REPORT+="**Total issues across all projects**|**$TOTAL_ISSUES**"
+          REPORT+="**Total issues across all plugins**|**$TOTAL_ISSUES**"
           echo -e "$REPORT" > ISSUES.md
 
       - name: Commit and push changes
