@@ -25,7 +25,7 @@ jobs:
           declare -A CONTRIBUTORS_MAP
           declare -A BOT_CONTRIBUTORS_MAP
 
-          REPORT="project|contributors\n-------|------------\n"
+          REPORT="plugin|contributors\n------|------------\n"
 
           for REPO in "${REPOS[@]}"; do
             PAGE=1
@@ -64,7 +64,7 @@ jobs:
             REPORT+="[$USERNAME/**$REPO_NAME**](https://github.com/$REPO)|[$CONTRIBUTORS](https://github.com/$REPO/graphs/contributors)\n"
           done
           UNIQUE_CONTRIBUTORS=$((${#CONTRIBUTORS_MAP[@]} + ${#BOT_CONTRIBUTORS_MAP[@]}))
-          REPORT+="**Unique contributors across all projects**|**$UNIQUE_CONTRIBUTORS**\n\n# List of all contributors\n"
+          REPORT+="**Unique contributors across all plugins**|**$UNIQUE_CONTRIBUTORS**\n\n# List of all contributors\n"
           for LOGIN in "${!CONTRIBUTORS_MAP[@]}"; do
             REPORT+="\n * [$LOGIN](${CONTRIBUTORS_MAP[$LOGIN]})"
           done
