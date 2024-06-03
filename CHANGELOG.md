@@ -4,5 +4,8 @@ All notable changes to the [agjjQuery project](https://github.com/agjjQuery/agjj
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [v1.0.1](https://github.com/agjjQuery/agjjQuery/releases/tag/v1.0.1) (June 2, 2024)
+ * Fixed `bower.json` file
+
 ## [v1.0.0](https://github.com/agjjQuery/agjjQuery/releases/tag/v1.0.0) (June 1, 2024)
  * Intial release of agjjQuery

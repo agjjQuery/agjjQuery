@@ -4,7 +4,7 @@
   "homepage": "https://agjjQuery.org/",
   "description": "agjjQuery is a collection of plugins started by Andrew G. Johnson for Javascript’s jQuery library",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/agjjQuery/agjjQuery",
   "bugs": {
     "url": "https://github.com/agjjQuery/agjjQuery/issues"

@@ -3,7 +3,7 @@
   "description": "agjjQuery is a collection of plugins started by Andrew G. Johnson for Javascript’s jQuery library",
   "main": [],
   "dependencies": {
-    "agjcalendar": "1.*"
+    "agjcalendar": "https://github.com/andrewgjohnson/agjCalendar.git#1.*"
   },
   "devDependencies": {},
   "keywords": [

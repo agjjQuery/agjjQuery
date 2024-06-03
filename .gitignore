@@ -14,5 +14,11 @@ Thumbs.db
 .project
 _site
 .settings/*
+bower_components/
+bower_components/*
 composer.lock
+node_modules/
+node_modules/*
+package-lock.json
 vendor
+yarn.lock
