@@ -19,8 +19,8 @@ jobs:
       - name: Fetch downloads total
         run: |
           REPOS=(
-            "agjjQuery/agjjQuery"
-            "andrewgjohnson/agjCalendar"
+            #"agjjquery"
+            "agjcalendar"
           )
           REPORT="project|downloads\n-------|----------\n"
           TOTAL_DOWNLOADS=0
