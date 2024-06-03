@@ -20,7 +20,7 @@ All **agjjQuery** plugins:
 
 ## Usage/Installation
 
-You will need an HTML reference to jQuery in order for the plugin to function.
+You will need an HTML reference to jQuery in order for the plugins to function.
 
     <!-- Reference to the jQuery Javascript library -->
     <script type="text/javascript" src="//code.jquery.com/jquery-3.7.1.min.js"></script>
