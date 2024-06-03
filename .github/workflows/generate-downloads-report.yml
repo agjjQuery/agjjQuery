@@ -35,9 +35,7 @@ jobs:
             DOWNLOADS=$(echo $RESPONSE | jq '[.downloads[].downloads] | add')
             FORMATTED_DOWNLOADS=$(format_number $DOWNLOADS)
             TOTAL_DOWNLOADS=$((TOTAL_DOWNLOADS + DOWNLOADS))
-            USERNAME=$(echo $REPO | cut -d'/' -f1)
-            REPO_NAME=$(echo $REPO | cut -d'/' -f2)
-            REPORT+="[$USERNAME/**$REPO_NAME**](https://github.com/$REPO)|[$FORMATTED_DOWNLOADS](https://packagist.org/packages/$REPO/stats)\n"
+            REPORT+="[**$REPO**](https://packagist.org/packages/$REPO)|[$FORMATTED_DOWNLOADS](https://packagist.org/packages/$REPO/stats)\n"
           done
           FORMATTED_TOTAL_DOWNLOADS=$(format_number $TOTAL_DOWNLOADS)
           REPORT+="**Total downloads across all projects**|**$FORMATTED_TOTAL_DOWNLOADS**"
