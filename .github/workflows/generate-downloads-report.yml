@@ -35,7 +35,7 @@ jobs:
             DOWNLOADS=$(echo $RESPONSE | jq '[.downloads[].downloads] | add')
             FORMATTED_DOWNLOADS=$(format_number $DOWNLOADS)
             TOTAL_DOWNLOADS=$((TOTAL_DOWNLOADS + DOWNLOADS))
-            REPORT+="[**$REPO**](https://packagist.org/packages/$REPO)|[$FORMATTED_DOWNLOADS](https://packagist.org/packages/$REPO/stats)\n"
+            REPORT+="[**$REPO**](https://www.npmjs.com/package/$REPO)|[$FORMATTED_DOWNLOADS](https://www.npmjs.com/package/$REPO)\n"
           done
           FORMATTED_TOTAL_DOWNLOADS=$(format_number $TOTAL_DOWNLOADS)
           REPORT+="**Total downloads across all projects**|**$FORMATTED_TOTAL_DOWNLOADS**"
