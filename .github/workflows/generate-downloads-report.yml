@@ -1,0 +1,58 @@
+name: Generate Downloads Report
+
+on:
+  schedule:
+    - cron: '0 * * * *' # run hourly
+  workflow_dispatch: # allow manual triggering
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-downloads:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch downloads total
+        run: |
+          REPOS=(
+            "agjjQuery/agjjQuery"
+            "andrewgjohnson/agjCalendar"
+          )
+          REPORT="project|downloads\n-------|----------\n"
+          TOTAL_DOWNLOADS=0
+          END_DATE=$(date +"%Y-%m-%d")
+
+          format_number() {
+            LC_NUMERIC="en_US.UTF-8" printf "%'d\n" $1
+          }
+
+          for REPO in "${REPOS[@]}"; do
+            RESPONSE=$(curl -s "https://api.npmjs.org/downloads/range/2000-01-01:${END_DATE}/$REPO")
+            DOWNLOADS=$(echo $RESPONSE | jq '[.downloads[].downloads] | add')
+            FORMATTED_DOWNLOADS=$(format_number $DOWNLOADS)
+            TOTAL_DOWNLOADS=$((TOTAL_DOWNLOADS + DOWNLOADS))
+            USERNAME=$(echo $REPO | cut -d'/' -f1)
+            REPO_NAME=$(echo $REPO | cut -d'/' -f2)
+            REPORT+="[$USERNAME/**$REPO_NAME**](https://github.com/$REPO)|[$FORMATTED_DOWNLOADS](https://packagist.org/packages/$REPO/stats)\n"
+          done
+          FORMATTED_TOTAL_DOWNLOADS=$(format_number $TOTAL_DOWNLOADS)
+          REPORT+="**Total downloads across all projects**|**$FORMATTED_TOTAL_DOWNLOADS**"
+          echo -e "$REPORT" > DOWNLOADS.md
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add DOWNLOADS.md
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Update downloads report"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
