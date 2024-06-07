@@ -37,12 +37,14 @@ jobs:
         run: |
           BADGE_URL="https://raster.shields.io/badge/downloads-"
 
+          round() {
+            echo $1 | awk '{printf "%d", ($1 + 0.5)}'
+          }
+
           if [ $TOTAL_DOWNLOADS -ge 999500 ]; then
-            ROUNDED_DOWNLOADS=$(( (TOTAL_DOWNLOADS) / 1000000 ))
-            BADGE_URL="${BADGE_URL}${ROUNDED_DOWNLOADS}M"
+            BADGE_URL="${BADGE_URL}$(round $(echo "$TOTAL_DOWNLOADS / 1000000" | bc -l))M"
           elif [ $TOTAL_DOWNLOADS -ge 1000 ]; then
-            ROUNDED_DOWNLOADS=$(( (TOTAL_DOWNLOADS) / 1000 ))
-            BADGE_URL="${BADGE_URL}${ROUNDED_DOWNLOADS}k"
+            BADGE_URL="${BADGE_URL}$(round $(echo "$TOTAL_DOWNLOADS / 1000" | bc -l))k"
           else
             BADGE_URL="${BADGE_URL}${TOTAL_DOWNLOADS}"
           fi
