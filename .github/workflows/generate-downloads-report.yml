@@ -18,6 +18,12 @@ jobs:
 
       - name: Fetch downloads total
         run: |
+          sudo apt-get update
+          sudo apt-get install -y locales
+          sudo locale-gen en_US.UTF-8
+          export LC_ALL=en_US.UTF-8
+          export LANG=en_US.UTF-8
+
           REPOS=(
             "agjjquery"
             "agjcalendar"
@@ -26,30 +32,18 @@ jobs:
           TOTAL_DOWNLOADS=0
           END_DATE=$(date +"%Y-%m-%d")
 
-          round() {
-            echo $1 | awk '{printf "%d", ($1 + 0.5)}'
+          format_number() {
+            echo $1 | awk '{printf "%'\''d\n", $1}'
           }
 
           for REPO in "${REPOS[@]}"; do
             RESPONSE=$(curl -s "https://api.npmjs.org/downloads/range/2000-01-01:${END_DATE}/$REPO")
             DOWNLOADS=$(echo $RESPONSE | jq '[.downloads[].downloads] | add')
-            if [ $DOWNLOADS -ge 999500 ]; then
-              FORMATTED_DOWNLOADS="$(round $(echo "$DOWNLOADS / 1000000" | bc -l))M"
-            elif [ $DOWNLOADS -ge 1000 ]; then
-              FORMATTED_DOWNLOADS="$(round $(echo "$DOWNLOADS / 1000" | bc -l))k"
-            else
-              FORMATTED_DOWNLOADS=$DOWNLOADS
-            fi
+            FORMATTED_DOWNLOADS=$(format_number $DOWNLOADS)
             TOTAL_DOWNLOADS=$((TOTAL_DOWNLOADS + DOWNLOADS))
             REPORT+="[**$REPO**](https://www.npmjs.com/package/$REPO)|[$FORMATTED_DOWNLOADS](https://www.npmjs.com/package/$REPO)\n"
           done
-          if [ $TOTAL_DOWNLOADS -ge 999500 ]; then
-            FORMATTED_TOTAL_DOWNLOADS="$(round $(echo "$TOTAL_DOWNLOADS / 1000000" | bc -l))M"
-          elif [ $TOTAL_DOWNLOADS -ge 1000 ]; then
-            FORMATTED_TOTAL_DOWNLOADS="$(round $(echo "$TOTAL_DOWNLOADS / 1000" | bc -l))k"
-          else
-            FORMATTED_TOTAL_DOWNLOADS=$TOTAL_DOWNLOADS
-          fi  
+          FORMATTED_TOTAL_DOWNLOADS=$(format_number $TOTAL_DOWNLOADS)
           REPORT+="**Total downloads across all plugins**|**$FORMATTED_TOTAL_DOWNLOADS**"
           echo -e "$REPORT" > DOWNLOADS.md
 
