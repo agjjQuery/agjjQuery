@@ -5,7 +5,7 @@
 [![GitHub Stargazers](https://agjjQuery.org/documentation/agjjQuery.org/images/stargazers-badge.png)](https://agjjQuery.org/statistics/#stargazers)
 [![GitHub Contributors](https://agjjQuery.org/documentation/agjjQuery.org/images/contributors-badge.png)](https://agjjQuery.org/statistics/#contributors)
 [![GitHub Issues](https://agjjQuery.org/documentation/agjjQuery.org/images/issues-badge.png)](https://agjjQuery.org/statistics/#open-issues)
-[![Patreon](https://img.shields.io/endpoint.png?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dagjopensource%26type%3Dpatrons&colorB=0366d6&style=flat-square&logoColor=white&logo=patreon)](https://patreon.com/agjopensource)
+[![Patreon](https://agjjQuery.org/documentation/agjjQuery.org/images/patreon-badge.png)](https://patreon.com/agjopensource)
 
 <p align="center"><a href="https://agjjQuery.org/" title=""><img src="https://agjjQuery.org/documentation/agjjQuery.org/images/avatar.png" alt="" title="" width="400" id="avatar" /></a></p>
 
