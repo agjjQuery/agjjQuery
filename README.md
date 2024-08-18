@@ -1,6 +1,6 @@
 # agjjQuery
 
-[![MIT License](https://img.shields.io/badge/license-MIT-0366d6.png?colorB=0366d6&style=flat-square)](https://github.com/agjjQuery/agjjQuery/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-0366d6.png?colorB=0366d6&style=flat-square)](https://github.com/agjjQuery/agjjQuery/blob/main/LICENSE)
 [![npm Downloads](https://agjjQuery.org/documentation/agjjQuery.org/images/downloads-badge.png)](https://agjjQuery.org/statistics/#downloads)
 [![GitHub Stargazers](https://agjjQuery.org/documentation/agjjQuery.org/images/stargazers-badge.png)](https://agjjQuery.org/statistics/#stargazers)
 [![GitHub Contributors](https://agjjQuery.org/documentation/agjjQuery.org/images/contributors-badge.png)](https://agjjQuery.org/statistics/#contributors)
@@ -20,7 +20,7 @@ All **agjjQuery** plugins:
 
 ## Usage/Installation
 
-You will need an HTML reference to jQuery in order for the plugin to function.
+You will need an HTML reference to jQuery in order for the plugins to function.
 
     <!-- Reference to the jQuery Javascript library -->
     <script type="text/javascript" src="//code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -72,8 +72,8 @@ Full list of contributors across all plugins:
  * [Imgbot (@ImgBotApp)](https://github.com/ImgBotApp)
  * [GitHub Actions (github-actions[bot])](https://github.com/features/actions)
 
-Our [security policies and procedures](https://github.com/agjjQuery/agjjQuery/blob/master/.github/SECURITY.md) comes via the [atomist/samples](https://github.com/atomist/samples/blob/master/SECURITY.md) project. Our [pull request template](https://github.com/agjjQuery/agjjQuery/blob/master/.github/PULL_REQUEST_TEMPLATE.md) comes via the [stevemao/github-issue-templates](https://github.com/stevemao/github-issue-templates) project. The [forest photo](https://unsplash.com/photos/RfTD9NoLMEE) comes via [Radek Homola](https://unsplash.com/@radekhomola).
+Our [security policies and procedures](https://github.com/agjjQuery/agjjQuery/blob/main/.github/SECURITY.md) comes via the [atomist/samples](https://github.com/atomist/samples/blob/master/SECURITY.md) project. Our [pull request template](https://github.com/agjjQuery/agjjQuery/blob/main/.github/PULL_REQUEST_TEMPLATE.md) comes via the [stevemao/github-issue-templates](https://github.com/stevemao/github-issue-templates) project. The [forest photo](https://unsplash.com/photos/RfTD9NoLMEE) comes via [Radek Homola](https://unsplash.com/@radekhomola).
 
 ## Changelog
 
-You can find all notable changes in the [changelog](https://github.com/agjjQuery/agjjQuery/blob/master/CHANGELOG.md).
+You can find all notable changes in the [changelog](https://github.com/agjjQuery/agjjQuery/blob/main/CHANGELOG.md).

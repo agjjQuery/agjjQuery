@@ -18,6 +18,12 @@ jobs:
 
       - name: Fetch downloads total
         run: |
+          sudo apt-get update
+          sudo apt-get install -y locales
+          sudo locale-gen en_US.UTF-8
+          export LC_ALL=en_US.UTF-8
+          export LANG=en_US.UTF-8
+
           REPOS=(
             "agjjquery"
             "agjcalendar"
@@ -27,7 +33,7 @@ jobs:
           END_DATE=$(date +"%Y-%m-%d")
 
           format_number() {
-            LC_NUMERIC="en_US.UTF-8" printf "%'d\n" $1
+            echo $1 | awk '{printf "%'\''d\n", $1}'
           }
 
           for REPO in "${REPOS[@]}"; do
