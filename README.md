@@ -1,13 +1,14 @@
 # agjjQuery
 
 [![MIT License](https://img.shields.io/badge/license-MIT-0366d6.png?colorB=0366d6&style=flat-square)](https://github.com/agjjQuery/agjjQuery/blob/main/LICENSE)
-[![npm Downloads](https://agjjQuery.org/documentation/agjjQuery.org/images/downloads-badge.png)](https://agjjQuery.org/statistics/#downloads)
-[![GitHub Stargazers](https://agjjQuery.org/documentation/agjjQuery.org/images/stargazers-badge.png)](https://agjjQuery.org/statistics/#stargazers)
-[![GitHub Contributors](https://agjjQuery.org/documentation/agjjQuery.org/images/contributors-badge.png)](https://agjjQuery.org/statistics/#contributors)
-[![GitHub Issues](https://agjjQuery.org/documentation/agjjQuery.org/images/issues-badge.png)](https://agjjQuery.org/statistics/#open-issues)
-[![Patreon](https://agjjQuery.org/documentation/agjjQuery.org/images/patreon-badge.png)](https://patreon.com/agjopensource)
+[![Current Release](https://img.shields.io/github/release/agjjQuery/agjjQuery.png?colorB=0366d6&style=flat-square&logoColor=white&logo=github)](https://github.com/agjjQuery/agjjQuery/releases)
+[![npm Downloads](documentation/images/downloads-badge.png)](https://agjjQuery.org/statistics/#downloads)
+[![GitHub Stargazers](documentation/images/stargazers-badge.png)](https://agjjQuery.org/statistics/#stargazers)
+[![GitHub Contributors](documentation/images/contributors-badge.png)](https://agjjQuery.org/statistics/#contributors)
+[![GitHub Issues](documentation/images/issues-badge.png)](https://agjjQuery.org/statistics/#open-issues)
+[![Patreon](documentation/images/patreon-badge.png)](https://patreon.com/agjopensource)
 
-<p align="center"><a href="https://agjjQuery.org/" title=""><img src="https://agjjQuery.org/documentation/agjjQuery.org/images/avatar.png" alt="" title="" width="400" id="avatar" /></a></p>
+<p align="center"><a href="https://agjjQuery.org/" title=""><img src="documentation/images/avatar.png" alt="" title="" width="400" id="avatar" /></a></p>
 
 ## Description
 
@@ -72,7 +73,7 @@ Full list of contributors across all plugins:
  * [Imgbot (@ImgBotApp)](https://github.com/ImgBotApp)
  * [GitHub Actions (github-actions[bot])](https://github.com/features/actions)
 
-Our [security policies and procedures](https://github.com/agjjQuery/agjjQuery/blob/main/.github/SECURITY.md) comes via the [atomist/samples](https://github.com/atomist/samples/blob/master/SECURITY.md) project. Our [pull request template](https://github.com/agjjQuery/agjjQuery/blob/main/.github/PULL_REQUEST_TEMPLATE.md) comes via the [stevemao/github-issue-templates](https://github.com/stevemao/github-issue-templates) project. The [forest photo](https://unsplash.com/photos/RfTD9NoLMEE) comes via [Radek Homola](https://unsplash.com/@radekhomola).
+Our [security policies and procedures](https://github.com/agjjQuery/agjjQuery/blob/main/.github/SECURITY.md) comes via the [atomist/samples](https://github.com/atomist/samples/blob/master/SECURITY.md) project. Our [pull request template](https://github.com/agjjQuery/agjjQuery/blob/main/.github/PULL_REQUEST_TEMPLATE.md) comes via the [stevemao/github-issue-templates](https://github.com/stevemao/github-issue-templates) project. The [Jekyll theme](https://github.com/andrewgjohnson/open-source-documentation-jekyll-theme) was released by [Andrew G. Johnson](https://github.com/andrewgjohnson).
 
 ## Changelog
 

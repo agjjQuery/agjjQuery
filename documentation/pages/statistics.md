@@ -1,8 +1,9 @@
 ---
-layout:    layout
-title:     agjjQuery&#58; Statistics
+layout:    default
+title:     Statistics • agjjQuery
 permalink: /statistics/
-nav:       3
+nav_order: 3
+nav_text:  Statistics
 ---
 
 # Statistics

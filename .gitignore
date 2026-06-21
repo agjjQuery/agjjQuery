@@ -24,3 +24,6 @@ vendor
 yarn.lock
 .claude
 .claude/*
+_config.local.yml
+_layouts
+assets
