@@ -25,6 +25,9 @@ social_links:
   - platform:         github
     url:              https://github.com/agjjQuery/agjjQuery
     label:            agjjQuery on GitHub
+  - platform:         npm
+    url:              https://www.npmjs.com/package/agjjquery
+    label:            agjjQuery on npm
   - platform:         patreon
     url:              https://www.patreon.com/agjopensource
     label:            agjjQuery on Patreon
