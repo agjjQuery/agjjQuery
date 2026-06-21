@@ -70,13 +70,13 @@ jobs:
           BADGE_URL="${BADGE_URL}-0366d6.png?colorB=0366d6&style=flat-square&logoColor=white&logo=github"
 
           echo "Downloading badge from URL: $BADGE_URL"
-          curl -L "$BADGE_URL" -o documentation/agjjQuery.org/images/contributors-badge.png
+          curl -L "$BADGE_URL" -o documentation/images/contributors-badge.png
 
       - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add documentation/agjjQuery.org/images/contributors-badge.png
+          git add documentation/images/contributors-badge.png
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "Update contributors badge"
             git push
