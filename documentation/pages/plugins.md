@@ -1,8 +1,9 @@
 ---
-layout:    layout
-title:     agjjQuery&#58; Plugins
+layout:    default
+title:     Plugins • agjjQuery
 permalink: /plugins/
-nav:       2
+nav_order: 2
+nav_text:  Plugins
 ---
 
 # Plugins

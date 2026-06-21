@@ -1,8 +1,9 @@
 ---
-layout:    layout
-title:     agjjQuery&#58; License
+layout:    default
+title:     License • agjjQuery
 permalink: /license/
-nav:       4
+nav_order: 4
+nav_text:  License
 ---
 
 # License
