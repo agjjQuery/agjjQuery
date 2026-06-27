@@ -34,6 +34,16 @@ social_links:
   - platform:         x
     url:              https://x.com/agjjQuery
     label:            agjjQuery on 𝕏
+nav:
+  - url:              https://twitter.com/agjjQuery
+    nav_text:         Twitter
+    nav_order:        101
+  - url:              https://x.com/agjjQuery
+    nav_text:         𝕏
+    nav_order:        102
+  - url:              https://patreon.com/agjopensource
+    nav_text:         Patreon
+    nav_order:        103
 exclude:              [
                        .github,
                        .github/*.md,

@@ -7,24 +7,15 @@ permalink: /menu/
 # Menu
 
 <ul>
-    {% assign site_title_with_semicolon = site.title | append: "&#58; " %}
-    {% assign pages_sorted = site.pages | sort: "nav" %}
-    {% for page in pages_sorted %}
-        {% if page.nav %}
-            <li>
-                <a href="{{ page.url | prepend: site.baseurl }}" title="{{ page.title }}">
-                    {{ page.title | replace: site_title_with_semicolon, "" }}
-                </a>
-            </li>
-        {% endif %}
+    {% assign nav_items = site.pages | where_exp: "item", "item.nav_order != nil" %}
+    {% if site.nav %}
+        {% assign nav_items = nav_items | concat: site.nav %}
+    {% endif %}
+    {% assign nav_items = nav_items | sort: 'nav_order' %}
+    {% for nav_item in nav_items %}
+        {% assign nav_text = nav_item.nav_text | default: nav_item.title %}
+        <li>
+            <a href="{{ nav_item.url | relative_url | escape }}" title="{{ nav_text | escape }}">{{ nav_text | escape }}</a>
+        </li>
     {% endfor %}
-    <li>
-        <a href="https://twitter.com/agjjQuery" title="Twitter">Twitter</a>
-    </li>
-    <li>
-        <a href="https://x.com/agjjQuery" title="𝕏">𝕏</a>
-    </li>
-    <li>
-        <a href="https://patreon.com/agjopensource" title="Patreon">Patreon</a>
-    </li>
 </ul>
