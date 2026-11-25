@@ -1,5 +1,5 @@
 plugin|downloads
 ------|----------
-[**agjjquery**](https://www.npmjs.com/package/agjjquery)|[334](https://www.npmjs.com/package/agjjquery)
-[**agjcalendar**](https://www.npmjs.com/package/agjcalendar)|[995](https://www.npmjs.com/package/agjcalendar)
-**Total downloads across all plugins**|**1,329**
+[**agjjquery**](https://www.npmjs.com/package/agjjquery)|[335](https://www.npmjs.com/package/agjjquery)
+[**agjcalendar**](https://www.npmjs.com/package/agjcalendar)|[997](https://www.npmjs.com/package/agjcalendar)
+**Total downloads across all plugins**|**1,332**
